@@ -2,6 +2,7 @@
 Super simple java script to do partial or full page slider with customizable navigation.
 ## Features
 - Can be used with partial or full websites.
+- Horizontal and vertical sliding.
 - Touchscreen support.
 - Editable navigation panels.
 - Forward and backward slide buttons.
@@ -11,13 +12,13 @@ Super simple java script to do partial or full page slider with customizable nav
 
 ## Previews
 
-### [Auto horizontal slider](https://github.com/MikkoP88/FullPageSlider/blob/main/previews/auto-horizontal-slider/index.html)
+### [Auto horizontal slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/auto-horizontal-slider/index.html)
 
-### [Custom vertical slider](https://github.com/MikkoP88/FullPageSlider/blob/main/previews/custom-vertical-slider/index.html)
+### [Custom vertical slider](hhttps://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/custom-vertical-slider/index.html)
 
-### [Simple horizontal slider](https://github.com/MikkoP88/FullPageSlider/blob/main/previews/simple-horizontal-slider/index.html)
+### [Simple horizontal slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/simple-horizontal-slider/index.html)
 
-### [Simple vertical slider](https://github.com/MikkoP88/FullPageSlider/blob/main/previews/simple-vertical-slider/index.html)
+### [Simple vertical slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/simple-vertical-slider/index.html)
 
 ## Usage
 Download javaslider.js or javaslider-min.js and deploy javascipt on html file. For editing silder appearance and controls you need only edit html and CSS. 
