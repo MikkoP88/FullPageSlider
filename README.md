@@ -21,7 +21,7 @@ Super simple java script to do partial or full page slider with customizable nav
 ### [Simple vertical slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/simple-vertical-slider/index.html)
 
 ## Usage
-Download javaslider.js or javaslider-min.js and deploy javascipt on html file. For editing silder appearance and controls you need only edit html and CSS. 
+Download javaslider.js or javaslider-min.js and set up html file for javascipt. For editing silder appearance and controls you need only edit html and CSS. 
 
 ### Settings example on html
 Note! this example show slider and navigation injection point IDs
