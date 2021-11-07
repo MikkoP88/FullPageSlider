@@ -14,7 +14,7 @@ Super simple java script to do partial or full page slider with customizable nav
 
 ### [Auto horizontal slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/auto-horizontal-slider/index.html)
 
-### [Custom vertical slider](hhttps://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/custom-vertical-slider/index.html)
+### [Custom vertical slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/custom-vertical-slider/index.html)
 
 ### [Simple horizontal slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/simple-horizontal-slider/index.html)
 
