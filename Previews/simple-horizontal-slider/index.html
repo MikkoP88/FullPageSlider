@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, maximum-scale=1.0" />
+	<meta charset="UTF-8">
+	<title>Full Page Slider</title>
+	<!-- Styles CSS -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Slider CSS -->
+	<link rel="stylesheet" type="text/css" href="css/slider.css">
+	<!-- Slider script -->
+	<script src="js/javaslider-min.js"></script>
+</head>
+<body >
+	<div class="silderbody" id="body">
+		<!-- Menu -->
+		<div class="menu_area add_active_look" id="menu-area">
+		</div>
+
+		<!-- bottom Text -->
+		<div class="changing_bottom_text add_active_look" id="changing-bottom-text">
+			<div class="bottom_text" id="bottom-text-1">
+				<div>SWIPE LEFT OR RIGHT</div>
+			</div>
+			<div class="bottom_text" id="bottom-text-2">
+				<div>NAVIGATE TO THE NEXT CONTENT</div>
+			</div>
+			<div class="bottom_text" id="bottom-text-3">
+				<div>OR USE MENU BUTTONS</div>
+			</div>
+			<div class="bottom_text" id="bottom-text-4">
+				<div>NAVIGATE TO THE NEXT CONTENT</div>
+			</div>
+		</div>
+
+		<!-- Pages -->
+		<!-- DO NOT DELETE PAGE CLASS, if you delete site not work correctly on phones -->
+		<div class="body_for_pages">
+			<div id="page-1" class="page page_1_color ">
+				<div class="page_container_1">
+					<span class="title">PAGE - 1</span>
+				</div>
+			</div>
+			<div id="page-2" class="page page_2_color">
+				<div class="page_container_1">
+					<span class="title">PAGE - 2</span>
+				</div>
+			</div>
+			<div id="page-3" class="page page_3_color">
+				<div class="page_container_1">
+					<span class="title">PAGE - 3</span>
+				</div>
+			</div>
+			<div id="page-4" class="page page_4_color">
+				<div class="page_container_1">
+					<span class="title">PAGE - 4</span>
+				</div>
+			</div>
+			<div id="page-5" class="page page_5_color">
+				<div class="page_container_1">
+					<span class="title">PAGE - 5</span>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		// Support up to 10 slides
+        var mySlider = slider(
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			"body",						// Id where all slider element going to be located. PLACE EVERY SLIDER ELEMENT INSIDE THIS ELEMENT. 
+            ".body_for_pages",			// Place where page slider going to be located 
+            "horizontal",					// Choose is slider vertical or horisontal.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            false,						// Auto Changing Slide is on.			
+            4000,						// Delay between slides on auto changing.		
+            false,						// Auto Changing Slide stop on last slide.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            true,						// Mouse scroll down or up can change page/slide. When vertical is on this not supported.			
+			true,						// Keyboard up and down can change page/slide. When vertical is on this not supported.			
+            true,						// Mouse Drag can change slide.			
+            true,						// Touch Drag can change slide.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+            false,						// Next and Previous Slide Button is on.
+			true,						// Next and Previous Button Active Look is on.
+			">",						// Next Button character/icon			
+            "<",						// Previous Button character/icon
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+			"menu-area",				// Id of element where adding menu.			
+            true,						// Menu element is on.	
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------			
+            '.changing_bottom_text',	// Class where bottom text element going to be located			
+			true,						// Bottom Text element is on.			
+			"4000",						// Delay for botton text element to change next text.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+										// If Active Look is on and "add_active_look" class added on some element,
+										// That element style can be configured differently every page.
+            true,						// Active Look is on.
+			250,						// Active Look Delay.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+										//  If Active Page is on, every time when any page is actived get that page class".page_(number of page)--active",
+										// and in this class you can control page style when is opening.
+			true,						// Active Page is on.
+			250,						// Active Page Delay
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------		
+			true,						//Body background color heritage is on. Body element heritage background color from previously page
+			"|",						// Add character between menu button, if "" is no character. do not delete this, can give error on console, leave empty with "" is better.
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+										// Set name for indicator menu buttons.
+										// Support up to 10 button.			
+			"PAGE-1",					// Name for Button on PAGE-1			
+			"PAGE-2",					// Name for Button on PAGE-2			
+			"PAGE-3",					// Name for Button on PAGE-3		
+			"PAGE-4",					// Name for Button on PAGE-4		
+            "PAGE-5",					// Name for Button on PAGE-5
+//--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+		);
+	</script>
+</body>
+</html >
