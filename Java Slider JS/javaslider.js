@@ -1,4 +1,4 @@
-var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerOn, autoSlideChangerDelay, autoSlideChangerStopEnd, changeSlideScrollOn, changeSlideKeyOn, changeSlideMouseOn, changeSlideTouchOn, nextPrevButtonOn, nextPrevButtonActiveLook, nextButtonCharacter, previousButtonCharacter,indicatorElement, indicatorElementOn, bottomTextElement, bottomTextElementOn, bottomSlideDelay, activeLookOn, ActiveLookDelay,activePageOn, activePageDelay, bodyColorHeritageOn, addSeparatoCharacter, slideButtonText1, slideButtonText2, slideButtonText3, slideButtonText4, slideButtonText5, slideButtonText6, slideButtonText7, slideButtonText8, slideButtonText9, slideButtonText10) {
+var slider = function (sliderBody, sliderElement, sliderAlign,wakeUpFunctioIsOn, wakeUpFunctio, autoSlideChangerOn, autoSlideChangerDelay, autoSlideChangerStopEnd, changeSlideScrollOn, changeSlideKeyOn, changeSlideMouseOn, changeSlideTouchOn, nextPrevButtonOn, nextPrevButtonActiveLook, nextButtonCharacter, previousButtonCharacter,indicatorElement, indicatorElementOn, bottomTextElement, bottomTextElementOn, bottomSlideDelay, activeLookOn, ActiveLookDelay,activePageOn, activePageDelay, bodyColorHeritageOn, addSeparatoCharacter, slideButtonText1, slideButtonText2, slideButtonText3, slideButtonText4, slideButtonText5, slideButtonText6, slideButtonText7, slideButtonText8, slideButtonText9, slideButtonText10) {
    
     var pages = [];
     var currentSlide = 1;
@@ -29,18 +29,18 @@ var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerO
             whatWheel = 'onwheel' in document.createElement('div') ? 'wheel' : document.onmousewheel !== undefined ? 'mousewheel' : 'DOMMouseScroll';
             window.addEventListener(whatWheel, function (e) {
                 var direction = e.wheelDelta || e.deltaY;
-                if (navigator.userAgent.indexOf("Firefox") !== -1) {
+                if (navigator.userAgent.indexOf("Firefox")) {
                     if (direction > 0) {
-                        changeSlide(1);
-                    } else {
                         changeSlide(-1);
+                    } else {
+                        changeSlide(1);
                     }
                 }
                 else {
                     if (direction > 0) {
-                        changeSlide(-1);
-                    } else {
                         changeSlide(1);
+                    } else {
+                        changeSlide(-1);
                     }
                 }
             });
@@ -258,18 +258,21 @@ var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerO
     };
 
     var updateNextPrevButton = function () {
-        if (currentSlide == pages.length) {
-            document.getElementById("next-button").style.display = "none";
-        }
-        else {
-            document.getElementById("next-button").style.display = "";
-        }
-        if (currentSlide <= 1) {
-            document.getElementById("previous-button").style.display = "none";
-        }
-        else {
-            document.getElementById("previous-button").style.display = "";
-        }
+
+        if(nextPrevButtonOn == true) {
+            if (currentSlide == pages.length) {
+                document.getElementById("next-button").style.display = "none";
+            }
+            else {
+                document.getElementById("next-button").style.display = "";
+            }
+            if (currentSlide <= 1) {
+                document.getElementById("previous-button").style.display = "none";
+            }
+            else {
+                document.getElementById("previous-button").style.display = "";
+            }
+        };
     };
 
     // Automatic slide changer
@@ -338,6 +341,11 @@ var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerO
   
     // handle page/section change
     changeSlide = function (direction) {
+        
+        //Start external Functio
+        if(wakeUpFunctioIsOn == true) {
+            wakeUpFunctio();
+        }
 
         // already doing it or last/first page, staph plz
         if (isChanging || (direction == 1 && currentSlide == pages.length) || (direction == -1 && currentSlide == 1)) {
@@ -364,6 +372,7 @@ var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerO
 
     // Tranform function move to next slide
     var transformSlide = function (newValue) {
+
         if (sliderAlign == "vertical" || sliderAlign == undefined) {
             changeCss(document.querySelector(sliderElement), {
                 transform: 'translate3d(0, ' + -(newValue) * 100 + '%, 0)'
@@ -378,6 +387,7 @@ var slider = function (sliderBody, sliderElement, sliderAlign, autoSlideChangerO
 
     //Change active page
     var activePage = function (oldPosition, newPosition) {
+        
         if (activePageOn == true) {
             setTimeout(() => {
                 document.querySelector('div.page_' + oldPosition + '--active').classList.remove('page_' + oldPosition + '--active');

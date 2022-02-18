@@ -11,6 +11,7 @@ Super simple java script to do partial or full page slider with customizable nav
 - Can deploy multiple slider on single site with different slide controls.
 
 ## Previews
+Previews is only for illustration. I keep updating only README.md and files inside Java Slider JS folder.
 
 ### [Auto horizontal slider](https://htmlpreview.github.io/?https://github.com/MikkoP88/FullPageSlider/blob/main/Previews/auto-horizontal-slider/index.html)
 
@@ -30,6 +31,9 @@ Note! this example show slider and navigation injection point IDs
         "body",                   // Id where all slider element going to be located. PLACE EVERY SLIDER ELEMENT INSIDE THIS ELEMENT. 
         ".body_for_pages",        // Place where page slider going to be located 
         "horizontal",             // Choose is slider vertical or horisontal.
+//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+	false,			// Wake up functio is on.
+	functionName,		// When slide changed wake up this functio. Dont use().
 //---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
         true,                     // Auto Changing Slide is on.			
         4000,                     // Delay between slides on auto changing.		
